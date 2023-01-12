@@ -1,0 +1,33 @@
+     [xslt] Using class org.apache.tools.ant.taskdefs.optional.TraXLiaison
+     [xslt] Processing D:\Cindy\Abbreviations_with_regex\Spanish_W0061\xml\W0061_001.xml to D:\Cindy\Abbreviations_with_regex\Spanish_W0061\xml\W0061_002a.xml
+     [xslt] Loading stylesheet D:\Cindy\Abbreviations_with_regex\Spanish_W0061\xsl\W0061_001.xsl
+     [xslt] INFO: amount of non-whitespace characters differs in input and output doc: 
+
+     [xslt] Input characters: 586071
+
+     [xslt] Output characters: 591151
+
+     [xslt] 
+
+     [xslt] INFO: added 907 with regex-based (word structure) abbr. expansion.
+
+     [xslt] INFO: quality check successfull.
+
+     [echo] -------------------------------------------------------------------
+     [echo] Repeated (la) abbreviations depending on word structure with regex.
+     [xslt] Using class org.apache.tools.ant.taskdefs.optional.TraXLiaison
+     [xslt] Processing D:\Cindy\Abbreviations_with_regex\Spanish_W0061\xml\W0061_002a.xml to D:\Cindy\Abbreviations_with_regex\Spanish_W0061\xml\W0061_002.xml
+     [xslt] Loading stylesheet D:\Cindy\Abbreviations_with_regex\Spanish_W0061\xsl\W0061_001.xsl
+     [xslt] INFO: amount of non-whitespace characters differs in input and output doc: 
+
+     [xslt] Input characters: 591151
+
+     [xslt] Output characters: 591154
+
+     [xslt] 
+
+     [xslt] INFO: added 908 with regex-based (word structure) abbr. expansion.
+
+     [xslt] INFO: quality check successfull.
+
+   [delete] Deleting: D:\Cindy\Abbreviations_with_regex\Spanish_W0061\xml\W0061_002a.xml

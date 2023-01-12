@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="Spanish_W0061" default="finalize">
+    
+    <property name="diff.dir" value="diff"/>
+    <property name="log.dir" value="log"/>
+    <property name="xml.dir" value="xml"/>
+    <property name="xsl.dir" value="xsl"/>
+    <property name="xslt.log" value="${log.dir}/${ant.project.name}_xslt.log"/>
+    <property name="xslt.processor" value="../lib/xsltproc/Saxon-HE-9.8.0-12.jar"/>
+    <property name="xslt.class" value="net.sf.saxon.TransformerFactoryImpl"/>
+    
+    <target name="patch-000"> 
+        <patch originalfile="${xml.dir}/W0061_v1-0.xml" destfile="${xml.dir}/W0061_001.xml" patchfile="${diff.dir}/W0061_000.diff"/>
+        <echo>Structural Annotation</echo>
+    </target>
+
+    <target name="xslt-001"> 
+        <echo>Added (es) abbreviations depending on word endings with regex.</echo>
+        <record name="${xslt.log}" action="start" loglevel="verbose"/>
+        <xslt force="true" in="${xml.dir}/W0061_001.xml" out="${xml.dir}/W0061_002a.xml" style="${xsl.dir}/W0061_001.xsl" classpath="${xslt.processor}" >
+            <factory name="${xslt.class}"/>
+        </xslt>
+        <echo>-------------------------------------------------------------------</echo>
+        <echo>Repeated (la) abbreviations depending on word structure with regex.</echo>
+        <xslt force="true" in="${xml.dir}/W0061_002a.xml" out="${xml.dir}/W0061_002.xml" style="${xsl.dir}/W0061_001.xsl" classpath="${xslt.processor}" >
+            <factory name="${xslt.class}"/>
+        </xslt>
+        <delete file="${xml.dir}/W0061_002a.xml"/>
+        <record name="${xslt.log}" action="stop"/>
+    </target>
+    <target name="finalize" depends="xslt-001">
+        <echo>Reached end of pipeline.</echo>
+    </target>
+    
+</project>

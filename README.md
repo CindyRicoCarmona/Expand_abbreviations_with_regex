@@ -1,4 +1,5 @@
 # Abbreviation expansion with regular expressions.
+[![DOI](https://zenodo.org/badge/588171970.svg)](https://zenodo.org/badge/latestdoi/588171970)
 
 Expanding early modern Latin and Spanish abbreviations depending on their word structure. It is a complementary automatic correction, and preparation for a further list based abbreviation expanssion and manual scholarly correction and editing. 
 
